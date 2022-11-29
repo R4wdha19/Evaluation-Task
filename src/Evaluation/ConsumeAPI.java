@@ -28,13 +28,14 @@ public class ConsumeAPI {
 		Path myFile = Path.of("C:\\Users\\user013\\Desktop\\Test.txt");
 		Files.writeString(myFile, response.body(), StandardCharsets.UTF_8);
 		boolean reading = true;
-		// Searching from a file
+		// Searching from a file for one word
 		while (reading) {
 			Path pathToFile = Path.of("C:\\Users\\user013\\Desktop\\Test.txt");
 
 			System.out.println(" Enter The Word That You Want To Search for ");
 			String words = sc.nextLine();
 			String stringFromFile = "";
+
 			stringFromFile = Files.readString(pathToFile);
 
 			try {
@@ -46,12 +47,16 @@ public class ConsumeAPI {
 
 			if (stringFromFile.contains(words)) {
 
-				System.out.println(" Word Found");
+				System.out.println(words + " Is Found");
 			} else {
 				System.out.println(" Word Not Found");
 			}
 
 		}
 		reading = false;
+
+		// Searching for words from file
+		String[] wordsList;
+
 	}
 }
