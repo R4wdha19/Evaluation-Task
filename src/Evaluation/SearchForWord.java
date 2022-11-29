@@ -35,5 +35,6 @@ public class SearchForWord {
 				System.out.println(" Word Not Found");
 			}
 		}
+		reading = false;
 	}
 }
