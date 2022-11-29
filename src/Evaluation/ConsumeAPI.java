@@ -40,6 +40,7 @@ public class ConsumeAPI {
 
 			try {
 				stringFromFile = Files.readString(pathToFile);
+				// Error handling
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
 
