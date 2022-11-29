@@ -4,3 +4,4 @@ Created a new class
 consumed an api
 wrote the api response to a file 
 searched for a specific word from the created response file . 
+created classes ans separated the methods 
