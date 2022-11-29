@@ -1,8 +1,5 @@
 package Evaluation;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -30,30 +27,31 @@ public class ConsumeAPI {
 		// Writing it to file
 		Path myFile = Path.of("C:\\Users\\user013\\Desktop\\Test.txt");
 		Files.writeString(myFile, response.body(), StandardCharsets.UTF_8);
-
+		boolean reading = true;
 		// Searching from a file
-		System.out.println(" Enter The Word That You Want To Search for ");
-		String words = sc.nextLine();
+		while (reading) {
+			Path pathToFile = Path.of("C:\\Users\\user013\\Desktop\\Test.txt");
 
-		File file1 = new File("C:\\Users\\user013\\Desktop\\Test.txt");
+			System.out.println(" Enter The Word That You Want To Search for ");
+			String words = sc.nextLine();
+			String stringFromFile = "";
+			stringFromFile = Files.readString(pathToFile);
 
-		FileReader fileReaderObj = new FileReader(file1);
-		BufferedReader bufferReaderObj = new BufferedReader(fileReaderObj);
-		String search = bufferReaderObj.readLine();
+			try {
+				stringFromFile = Files.readString(pathToFile);
+			} catch (IOException e) {
+				System.out.println(e.getMessage());
 
-		while (search != null) {
-
-			if (search.equals(words))
-
-			{
-				System.out.println("Word is Found");
 			}
 
-			else {
-				System.out.println("Word is Not Found");
+			if (stringFromFile.contains(words)) {
+
+				System.out.println(" Word Found");
+			} else {
+				System.out.println(" Word Not Found");
 			}
+
 		}
-		fileReaderObj.close();
+		reading = false;
 	}
-
 }
