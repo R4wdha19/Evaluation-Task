@@ -35,32 +35,30 @@ public class ConsumeAPI {
 		System.out.println(" Enter The Word That You Want To Search for ");
 		String words = sc.nextLine();
 
-		File file1 = new File("Test.txt");
-		String[] wordsList = null;
+		File file1 = new File("C:\\Users\\user013\\Desktop\\Test.txt");
+//		String[] wordsList=input;
 		FileReader fileReaderObj = new FileReader(file1);
 		BufferedReader bufferReaderObj = new BufferedReader(fileReaderObj);
 		String search;
 		String input = words;
 		int count = 0;
 		while ((search = bufferReaderObj.readLine()) != null) {
-			for (String x : wordsList) {
-				if (words.equals(input))
+//			for (String x : wordsList) {
+			if (words.equals(input))
 
-				{
-					count++;
-				}
+			{
+				count++;
 			}
-			if (count != 0) {
+		}
+		if (count != 0) {
 
-				System.out.println("Word is Found");
+			System.out.println("Word is Found");
 
-			} else {
-				System.out.println("Word is Not Found");
-			}
-
-			fileReaderObj.close();
+		} else {
+			System.out.println("Word is Not Found");
 		}
 
+		fileReaderObj.close();
 	}
 
 }
