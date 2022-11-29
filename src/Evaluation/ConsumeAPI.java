@@ -7,10 +7,10 @@ import java.io.IOException;
 public class ConsumeAPI {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-//		WriteToFile wtf = new WriteToFile();
-//		wtf.WriteResponseFile();
-//		SearchForWord sfow = new SearchForWord();
-//		sfow.SearchForOneWord();
+		WriteToFile wtf = new WriteToFile();
+		wtf.WriteResponseFile();
+		SearchForWord sfow = new SearchForWord();
+		sfow.SearchForOneWord();
 		DuplicatedWords dw = new DuplicatedWords();
 		dw.SearchForDuplicatedWords();
 
