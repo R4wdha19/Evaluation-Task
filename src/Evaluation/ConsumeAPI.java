@@ -18,14 +18,11 @@ public class ConsumeAPI {
 		case 2:
 			System.out.println("Search For A Word ");
 			SearchForWord.SearchForOneWord();
+			break;
+		case 3:
+			System.out.println("Duplicated And Unique Words ");
+			DuplicatedWords.SearchForDuplicatedWords();
 		}
-
-//		WriteToFile wtf = new WriteToFile();
-//		
-//		SearchForWord sfow = new SearchForWord();
-//		
-
-		DuplicatedWords.SearchForDuplicatedWords();
 
 	}
 
