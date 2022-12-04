@@ -32,7 +32,7 @@ public class SearchForWord {
 
 				System.out.println(words + " Is Found");
 			} else {
-				System.out.println(" Word Not Found");
+				System.out.println(words + " Word Not Found");
 			}
 		}
 		reading = false;
