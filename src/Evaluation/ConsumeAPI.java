@@ -16,6 +16,9 @@ public class ConsumeAPI {
 			WriteToFile.WriteResponseFile();
 			break;
 		case 2:
+			System.out.println("Where Do You Want TO Search From ? PDF OR TEXT FILE . ");
+			System.out.println("If You Want To Search From Text File press 1 ");
+
 			System.out.println("Search For A Word ");
 			SearchForWord.SearchForOneWord();
 			break;
