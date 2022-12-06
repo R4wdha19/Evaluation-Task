@@ -20,21 +20,9 @@ public class ConsumeAPI {
 			WriteToFile.WriteResponseFile();
 			break;
 		case 2:
-			System.out.println("Where Do You Want TO Search From ? PDF OR TEXT FILE . ");
-			System.out.println("If You Want To Search From Text File press 1 ");
-			System.out.println("If You Want To Search From PDF File press 2 ");
-			int pChoices = sc.nextInt();
-
-			switch (pChoices) {
-			case 1:
-				System.out.println("Search For A Word From Text File ");
-				SearchForWord.SearchForOneWord();
-				break;
-			case 2:
-				System.out.println("Search For A Word From PDF File ");
-
-				break;
-			}
+			System.out.println(" Search For A Word  ");
+			SearchForWord.SearchForOneWord();
+			break;
 
 		case 3:
 			System.out.println("Duplicated And Unique Words ");
@@ -42,5 +30,4 @@ public class ConsumeAPI {
 		}
 
 	}
-
 }
