@@ -7,27 +7,30 @@ import java.util.Scanner;
 
 public class ConsumeAPI {
 	public static void main(String[] args) throws IOException, InterruptedException {
-
+		boolean menu = true;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Please Choose An Option : ");
-		System.out.println(" 1 : Writting Response To File  ");
-		System.out.println(" 2 : Search For A Word  ");
-		System.out.println(" 3 : Find Duplicated And Unique Words ");
-		int option = sc.nextInt();
-		switch (option) {
-		case 1:
-			System.out.println("Writting To File ");
-			WriteToFile.WriteResponseFile();
-			break;
-		case 2:
-			System.out.println(" Search For A Word  ");
-			SearchForWord.SearchForOneWord();
-			break;
+		while (menu) {
+			System.out.println("Please Choose An Option : ");
+			System.out.println(" 1 : Writting Response To File  ");
+			System.out.println(" 2 : Search For A Word  ");
+			System.out.println(" 3 : Find Duplicated And Unique Words ");
+			int option = sc.nextInt();
+			switch (option) {
+			case 1:
+				System.out.println("Writting To File ");
+				WriteToFile.WriteResponseFile();
+				break;
+			case 2:
+				System.out.println(" Search For A Word  ");
+				SearchForWord.SearchForOneWord();
+				break;
 
-		case 3:
-			System.out.println("Duplicated And Unique Words ");
-			DuplicatedWords.SearchForDuplicatedWords();
+			case 3:
+				System.out.println("Duplicated And Unique Words ");
+				DuplicatedWords.SearchForDuplicatedWords();
+			}
+
 		}
-
+		menu = false;
 	}
 }

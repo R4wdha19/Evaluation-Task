@@ -45,7 +45,7 @@ public class WriteToFile {
 			// Writing it to file
 			Path myFile1 = Path.of("C:\\Users\\user013\\Desktop\\Test.pdf");
 			Files.writeString(myFile1, response1.body(), StandardCharsets.UTF_8);
-
+			break;
 		}
 
 	}
