@@ -18,6 +18,7 @@ public class SearchForWord {
 		switch (option) {
 		case 1:
 			System.out.println(" Search From A Text File ");
+			System.out.println(" Remeber ! If Word is Found File will be Moved To Documents Dirctory ");
 			// Searching from a file for one word
 
 			Path pathOfFile = Path.of("C:\\Users\\user013\\Desktop\\Test.txt");
@@ -27,14 +28,6 @@ public class SearchForWord {
 			String stringFromFile = "";
 
 			stringFromFile = Files.readString(pathOfFile);
-
-			try {
-				stringFromFile = Files.readString(pathOfFile);
-				// Error handling
-			} catch (IOException e) {
-				System.out.println(e.getMessage());
-
-			}
 
 			if (stringFromFile.contains(words)) {
 
@@ -47,6 +40,7 @@ public class SearchForWord {
 			break;
 		case 2:
 			System.out.println(" Search From A PDF File ");
+			System.out.println(" Remeber ! If Word is Found File will be Moved To Documents Dirctory ");
 			// Searching from a file for one word
 
 			Path pathOfFile1 = Path.of("C:\\Users\\user013\\Desktop\\Test.pdf");
@@ -57,18 +51,10 @@ public class SearchForWord {
 
 			stringFromFile1 = Files.readString(pathOfFile1);
 
-			try {
-				stringFromFile1 = Files.readString(pathOfFile1);
-				// Error handling
-			} catch (IOException e) {
-				System.out.println(e.getMessage());
-
-			}
-
 			if (stringFromFile1.contains(words1)) {
 
 				System.out.println(words1 + " Is Found");
-				Files.copy(pathOfFile1, newDirectory.resolve(pathOfFile1.getFileName()));
+				Files.move(pathOfFile1, newDirectory.resolve(pathOfFile1.getFileName()));
 			} else {
 				System.out.println(words1 + " Word Not Found");
 			}

@@ -12,8 +12,9 @@ public class ConsumeAPI {
 		while (menu) {
 			System.out.println("Please Choose An Option : ");
 			System.out.println(" 1 : Writting Response To File  ");
-			System.out.println(" 2 : Search For A Word  ");
+			System.out.println(" 2 : Search For A Word ");
 			System.out.println(" 3 : Find Duplicated And Unique Words ");
+			System.out.println(" 4 : Search For Many Words  ");
 			int option = sc.nextInt();
 			switch (option) {
 			case 1:
@@ -28,6 +29,9 @@ public class ConsumeAPI {
 			case 3:
 				System.out.println("Duplicated And Unique Words ");
 				DuplicatedWords.SearchForDuplicatedWords();
+				break;
+			case 4:
+				System.out.println("  Searching For Many Words  ");
 			}
 
 		}
