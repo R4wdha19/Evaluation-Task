@@ -33,13 +33,14 @@ public class SearchForWord {
 			Path pathOfFile = Path.of("C:\\Users\\user013\\Desktop\\Test.txt");
 
 			stringFromFile = Files.readString(pathOfFile);
+			for (String R : EnteredWords) {
+				if (stringFromFile1.contains(R)) {
 
-			if (stringFromFile.contains(words)) {
-
-				System.out.println(words + " Is Found");
-				Files.move(pathOfFile, newDirectory.resolve(pathOfFile.getFileName()));
-			} else {
-				System.out.println(words + " Word Not Found");
+					System.out.println(words + " Is Found");
+					Files.move(pathOfFile, newDirectory.resolve(pathOfFile.getFileName()));
+				} else {
+					System.out.println(words + " Word Not Found");
+				}
 			}
 
 			break;
