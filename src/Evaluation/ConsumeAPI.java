@@ -30,7 +30,9 @@ public class ConsumeAPI {
 				System.out.println("Duplicated And Unique Words ");
 				DuplicatedWords.SearchForDuplicatedWords();
 				break;
-
+			case 4:
+				ReadingPDF.readUsingPdfBox();
+				break;
 			}
 
 		}
